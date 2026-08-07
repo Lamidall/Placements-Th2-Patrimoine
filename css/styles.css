@@ -639,6 +639,161 @@ a { text-decoration: none; color: inherit; }
 /* Tax Benefits Grid */
 .tax-benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
 
+/* SCPI Specific Styles */
+.why-scpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+.why-scpi-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.why-scpi-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #f39c12 0%, #d68910 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+}
+.why-scpi-icon i { font-size: 1.8rem; color: var(--white); }
+.why-scpi-card h3 { color: var(--primary-color); margin-bottom: 1rem; }
+
+/* SCPI Types */
+.scpi-types-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.scpi-type-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.scpi-type-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-secondary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+}
+.scpi-type-icon i { font-size: 1.8rem; color: var(--white); }
+.scpi-type-card h3 { color: var(--primary-color); margin-bottom: 1rem; }
+.scpi-type-card p { color: var(--text-secondary); margin-bottom: 1.5rem; }
+.scpi-type-features {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+.scpi-type-features p {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+.scpi-type-features strong { color: var(--primary-color); }
+
+/* Investment Modes */
+.investment-modes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+.investment-mode-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.investment-mode-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+}
+.investment-mode-icon i { font-size: 1.8rem; color: var(--white); }
+.investment-mode-card h3 { color: var(--primary-color); margin-bottom: 1rem; }
+.investment-mode-card p { color: var(--text-secondary); margin-bottom: 1.5rem; }
+.investment-mode-card ul { list-style: none; text-align: left; }
+.investment-mode-card ul li { margin-bottom: 0.5rem; padding-left: 1.5rem; position: relative; }
+.investment-mode-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* SCPI Selection */
+.selection-intro {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+.scpi-selection-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+.scpi-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.scpi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+.scpi-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.scpi-logo i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+.scpi-logo h4 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+.scpi-info {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+.scpi-info p {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+.scpi-info strong { color: var(--primary-color); }
+.selection-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-top: 2rem;
+}
+
+/* Tax Details */
+.tax-details {
+    background: var(--light-gray);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+.tax-details p {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+.tax-details strong { color: var(--primary-color); }
+
 /* Responsive */
 @media (max-width: 1024px) {
     .hero .container { grid-template-columns: 1fr; text-align: center; }
