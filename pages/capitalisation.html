@@ -6,22 +6,23 @@
     <title>Capitalisation | TH2 Patrimoine</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>TH2 <span>Patrimoine</span></h1>
+                <a href="../index.html"><img src="../assets/logo-th2-patrimoine.png" alt="TH2 Patrimoine" width="228" height="48"></a>
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../index.html">Accueil</a></li>
                     <li><a href="assurance-vie.html">Assurance-vie</a></li>
                     <li><a href="capitalisation.html" class="active">Capitalisation</a></li>
                     <li><a href="per.html">PER</a></li>
                     <li><a href="scpi.html">SCPI</a></li>
-                    <li><a href="../index.html#contact" class="btn-contact">Contact</a></li>
                 </ul>
                 <div class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -41,217 +42,107 @@
     <!-- Main Content -->
     <main class="product-content">
         <div class="container">
-            <!-- Introduction -->
-            <section class="product-section">
-                <div class="product-intro">
-                    <h2>Qu'est-ce que la Capitalisation ?</h2>
-                    <p>Le contrat de capitalisation est un placement financier qui permet de faire fructifier un capital tout en bénéficiant d'une fiscalité avantageuse. Contrairement à l'assurance-vie, il ne comporte pas de clause bénéficiaire et est généralement utilisé pour des objectifs de transmission ou d'investissement à moyen/long terme.</p>
-                    <p>Chez TH2 Patrimoine, nous vous proposons des contrats de capitalisation performants, adaptés à votre profil d'investisseur et à vos objectifs financiers.</p>
-                </div>
-            </section>
-
-            <!-- Differences -->
-            <section class="product-section">
-                <h2>Capitalisation vs Assurance-vie</h2>
-                <div class="comparison-table">
+            <!-- Produits distribués -->
+            <section class="product-section partners-section" id="produits-distribues">
+                <h2>Nos partenaires Capitalisation</h2>
+                <div class="partners-table">
                     <table>
                         <thead>
                             <tr>
-                                <th>Critères</th>
-                                <th>Capitalisation</th>
-                                <th>Assurance-vie</th>
+                        <th class="col-partner">Nom compagnie</th>
+                        <th>Nom du contrat</th>
+                        <th>Ticket d'entrée</th>
+                        <th>Versement permanent</th>
+                        <th>Frais sur versement</th>
+                        <th>Frais de gestion</th>
+                        <th>Performance
+fonds euros 2025</th>
+                        <th>Performance
+gestion pilotée 2025</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Clause bénéficiaire</td>
-                                <td><i class="fas fa-times"></i> Non</td>
-                                <td><i class="fas fa-check"></i> Oui</td>
-                            </tr>
-                            <tr>
-                                <td>Transmission hors succession</td>
-                                <td><i class="fas fa-times"></i> Non</td>
-                                <td><i class="fas fa-check"></i> Oui</td>
-                            </tr>
-                            <tr>
-                                <td>Fiscalité après 8 ans</td>
-                                <td><i class="fas fa-check"></i> Oui</td>
-                                <td><i class="fas fa-check"></i> Oui</td>
-                            </tr>
-                            <tr>
-                                <td>Droits de succession</td>
-                                <td><i class="fas fa-check"></i> Abattement de 1 525 000€</td>
-                                <td><i class="fas fa-check"></i> Abattement de 152 500€ par bénéficiaire</td>
-                            </tr>
-                            <tr>
-                                <td>Utilisation</td>
-                                <td>Investissement, transmission</td>
-                                <td>Épargne, retraite, transmission</td>
-                            </tr>
+                    <tr class="partner-group partner-generali">
+                        <td class="col-partner" rowspan="3"><div class="partner-brand"><img src="../assets/logos/generali.svg" alt="Logo Generali" loading="lazy" width="120" height="44"><span class="partner-name">Generali</span></div></td>
+                        <td class="contract-name" rowspan="3">Himalia Capitalisation</td>
+                        <td>PP : 5 000 €<br>(1 000 € VP)</td>
+                        <td class="nowrap">75 €/mois</td>
+                        <td class="nowrap" rowspan="3">4,50&nbsp;% max</td>
+                        <td class="nowrap">Fonds Euros 0,90 %</td>
+                        <td class="perf" rowspan="3">1,90 % à 4,40 %</td>
+                        <td class="perf" rowspan="3">2 % à 16,06 %</td>
+                    </tr>
+                    <tr class="partner-group partner-generali">
+                        <td class="nowrap">PM : 250 000 €</td>
+                        <td class="nowrap">(PM IR uniquement)</td>
+                        <td class="nowrap">UC 1 %</td>
+                    </tr>
+                    <tr class="partner-group partner-generali">
+                        <td class="nowrap">Holding : 100 000 €</td>
+                        <td class="nowrap">(PM IR uniquement)</td>
+                        <td class="nowrap">ETF 1,50 %</td>
+                    </tr>
+                    <tr class="partner-group partner-swisslife">
+                        <td class="col-partner" rowspan="3"><div class="partner-brand"><img src="../assets/logos/swisslife.svg" alt="Logo SwissLife" loading="lazy" width="120" height="44"><span class="partner-name">SwissLife</span></div></td>
+                        <td class="contract-name" rowspan="3">Capi Expert Premium Plus</td>
+                        <td>PP : 3 000 € (100 € VP)</td>
+                        <td class="nowrap">100 €/mois</td>
+                        <td class="nowrap" rowspan="3">4,75&nbsp;% max</td>
+                        <td class="nowrap">Fonds Euros 0,80 %</td>
+                        <td class="perf" rowspan="3">1,70 % à 3,25 %</td>
+                        <td class="perf" rowspan="3">5,41 % à 12,46 %</td>
+                    </tr>
+                    <tr class="partner-group partner-swisslife">
+                        <td>PM : 75 000 €</td>
+                        <td></td>
+                        <td class="nowrap">UC 1,10 %</td>
+                    </tr>
+                    <tr class="partner-group partner-swisslife">
+                        <td></td>
+                        <td></td>
+                        <td class="nowrap">ETF 1,50 %</td>
+                    </tr>
+                    <tr class="partner-group partner-axa">
+                        <td class="col-partner" rowspan="3"><div class="partner-brand"><img src="../assets/logos/axa.svg" alt="Logo Axa" loading="lazy" width="120" height="44"><span class="partner-name">Axa</span></div></td>
+                        <td class="contract-name" rowspan="3">Coralis Capitalisation</td>
+                        <td>PP : 25 000 €</td>
+                        <td class="nowrap">150 €/mois</td>
+                        <td class="nowrap" rowspan="3">5&nbsp;% max</td>
+                        <td class="nowrap">Fonds Euros 1 %</td>
+                        <td class="perf" rowspan="3">2,25 % à 2,75 %</td>
+                        <td class="perf" rowspan="3">2,90 % à 12,09 %</td>
+                    </tr>
+                    <tr class="partner-group partner-axa">
+                        <td>PM : 25 000 €</td>
+                        <td></td>
+                        <td class="nowrap">UC 1 %</td>
+                    </tr>
+                    <tr class="partner-group partner-axa">
+                        <td></td>
+                        <td></td>
+                        <td class="nowrap">ETF 1,40 %</td>
+                    </tr>
+                    <tr class="partner-group partner-abeille">
+                        <td class="col-partner" rowspan="2"><div class="partner-brand"><img src="../assets/logos/abeille-assurances.png" alt="Logo Abeille Assurances" loading="lazy" width="120" height="44"><span class="partner-name">Abeille Assurances</span></div></td>
+                        <td class="contract-name">Capitalisation Active</td>
+                        <td>PP : 1 000 €</td>
+                        <td class="nowrap">150 €/mois</td>
+                        <td class="nowrap" rowspan="2">4,50&nbsp;% max</td>
+                        <td class="nowrap">Fonds Euros 0,95 %</td>
+                        <td class="perf" rowspan="2">2,50 % à 4,90 %</td>
+                        <td class="perf" rowspan="2">2,79 % à 7,80 %</td>
+                    </tr>
+                    <tr class="partner-group partner-abeille">
+                        <td class="contract-name">Capitalisation Plurielle</td>
+                        <td>PM : 20 000 €</td>
+                        <td class="nowrap">150 €/mois</td>
+                        <td class="nowrap">UC 0,95 %</td>
+                    </tr>
                         </tbody>
                     </table>
                 </div>
-            </section>
-
-            <!-- Benefits -->
-            <section class="product-section">
-                <h2>Les avantages de la Capitalisation</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <h3><i class="fas fa-chart-growth"></i> Performance</h3>
-                        <p>Accès aux mêmes supports d'investissement que l'assurance-vie avec un potentiel de rendement élevé.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3><i class="fas fa-gavel"></i> Transmission optimisée</h3>
-                        <p>Bénéficiez d'un abattement de 1 525 000€ sur les droits de succession après 8 ans de détention.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3><i class="fas fa-euro-sign"></i> Fiscalité avantageuse</h3>
-                        <p>Même fiscalité que l'assurance-vie après 8 ans : PFU de 30% (12,8% IR + 17,2% prélèvements sociaux) avec abattement annuel.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3><i class="fas fa-user-shield"></i> Anonymat</h3>
-                        <p>Le contrat de capitalisation n'apparaît pas dans la déclaration de succession, offrant une discrétion accrue.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3><i class="fas fa-sync-alt"></i> Flexibilité</h3>
-                        <p>Possibilité d'effectuer des versements libres ou programmés, ainsi que des rachats partiels ou totaux.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3><i class="fas fa-briefcase"></i> Gestion professionnelle</h3>
-                        <p>Bénéficiez de l'expertise de nos gestionnaires pour optimiser la performance de votre portefeuille.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Use Cases -->
-            <section class="product-section">
-                <h2>Cas d'usage de la Capitalisation</h2>
-                <div class="use-cases-grid">
-                    <div class="use-case-card">
-                        <div class="use-case-icon">
-                            <i class="fas fa-gift"></i>
-                        </div>
-                        <h3>Transmission de patrimoine</h3>
-                        <p>Transmettre un capital important à vos héritiers avec une fiscalité optimisée, notamment pour les patrimoines supérieurs à 1,5M€.</p>
-                    </div>
-                    <div class="use-case-card">
-                        <div class="use-case-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Investissement à long terme</h3>
-                        <p>Constituer un capital sur le long terme avec des supports performants (actions, obligations, SCPI, etc.).</p>
-                    </div>
-                    <div class="use-case-card">
-                        <div class="use-case-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h3>Placement professionnel</h3>
-                        <p>Optimiser la trésorerie de votre entreprise avec des solutions adaptées aux professionnels.</p>
-                    </div>
-                    <div class="use-case-card">
-                        <div class="use-case-icon">
-                            <i class="fas fa-piggy-bank"></i>
-                        </div>
-                        <h3>Complément de retraite</h3>
-                        <p>Préparer votre retraite avec des rachats programmés pour compléter vos revenus futurs.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Our Offers -->
-            <section class="product-section">
-                <h2>Nos contrats de Capitalisation</h2>
-                <div class="offers-grid">
-                    <div class="offer-card">
-                        <div class="offer-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h3>Capitalisation Premium</h3>
-                        <p>Contrat haut de gamme avec accès à une sélection exclusive de fonds et de SCPI performantes.</p>
-                        <ul>
-                            <li>Frais réduits</li>
-                            <li>Gestion sous mandat possible</li>
-                            <li>Accès à des opportunités d'investissement exclusives</li>
-                        </ul>
-                    </div>
-                    <div class="offer-card">
-                        <div class="offer-icon">
-                            <i class="fas fa-balance-scale"></i>
-                        </div>
-                        <h3>Capitalisation Équilibrée</h3>
-                        <p>Contrat offrant un équilibre parfait entre sécurité et performance avec une allocation diversifiée.</p>
-                        <ul>
-                            <li>Mix fonds euros / unités de compte</li>
-                            <li>Gestion pilotée selon votre profil</li>
-                            <li>Frais compétitifs</li>
-                        </ul>
-                    </div>
-                    <div class="offer-card">
-                        <div class="offer-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h3>Capitalisation Internationale</h3>
-                        <p>Contrat permettant d'investir sur les marchés internationaux avec une diversification géographique optimale.</p>
-                        <ul>
-                            <li>Accès aux marchés émergents</li>
-                            <li>Devises multiples</li>
-                            <li>Gestion active</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- FAQ -->
-            <section class="product-section">
-                <h2>Questions fréquentes</h2>
-                <div class="faq-container">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3><i class="fas fa-question-circle"></i> Qui peut souscrire un contrat de capitalisation ?</h3>
-                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Toute personne majeure peut souscrire un contrat de capitalisation. Il n'y a pas de limite d'âge pour l'ouverture, mais certains contrats peuvent avoir des restrictions selon les assureurs.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3><i class="fas fa-question-circle"></i> Quel est le montant minimum pour un contrat de capitalisation ?</h3>
-                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Le montant minimum varie selon les contrats, généralement entre 1 000€ et 10 000€ pour le premier versement. Certains contrats premium peuvent nécessiter un investissement initial plus important.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3><i class="fas fa-question-circle"></i> Quelle est la fiscalité en cas de rachat avant 8 ans ?</h3>
-                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Avant 4 ans : PFU de 35% (15% IR + 17,2% prélèvements sociaux + 2,8% contribution sociale généralisée). Entre 4 et 8 ans : PFU de 15% (7,5% IR + 17,2% prélèvements sociaux).</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3><i class="fas fa-question-circle"></i> Peut-on cumuler capitalisation et assurance-vie ?</h3>
-                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Oui, il est tout à fait possible de détenir à la fois des contrats d'assurance-vie et de capitalisation. Ces deux enveloppes fiscales sont complémentaires et répondent à des objectifs différents.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA Section -->
-            <section class="cta-section">
-                <div class="container">
-                    <h2>Intéressé par la Capitalisation ?</h2>
-                    <p>Nos experts vous accompagnent pour choisir le contrat le plus adapté à vos objectifs de placement et de transmission.</p>
-                    <a href="../index.html#contact" class="btn btn-primary">Demander un devis</a>
-                </div>
+                <p class="table-hint">Faites glisser le tableau horizontalement pour afficher toutes les colonnes.</p>
+                <p class="partners-note">Données au titre de l'exercice 2025, communiquées par les sociétés de gestion et les compagnies d'assurance. Les performances passées ne préjugent pas des performances futures et ne sont pas garanties.</p>
             </section>
         </div>
     </main>
@@ -300,18 +191,5 @@
     </a>
 
     <script src="../js/main.js"></script>
-    <script>
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function() {
-                const answer = this.nextElementSibling;
-                const toggle = this.querySelector('.faq-toggle i');
-                
-                answer.classList.toggle('active');
-                toggle.classList.toggle('fa-plus');
-                toggle.classList.toggle('fa-minus');
-            });
-        });
-    </script>
 </body>
 </html>

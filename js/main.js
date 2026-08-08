@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
             inputs.forEach(input => {
                 if (!input.value.trim()) {
                     isValid = false;
-                    input.style.borderColor = '#e74c3c';
+                    input.style.borderColor = '#D30B64';
                 } else {
                     input.style.borderColor = '';
                 }

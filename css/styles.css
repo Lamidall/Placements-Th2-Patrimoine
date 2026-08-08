@@ -1,28 +1,34 @@
 /* TH2 Patrimoine - Styles CSS */
 
-/* CSS Variables - Color Palette */
+/* CSS Variables - Charte graphique th2patrimoine.com */
 :root {
-    --primary-color: #2c3e50;
-    --primary-dark: #1a252f;
-    --primary-light: #34495e;
-    --secondary-color: #3498db;
-    --secondary-dark: #2980b9;
-    --secondary-light: #5dade2;
-    --accent-color: #e74c3c;
+    /* Bleu nuit de marque */
+    --primary-color: #1C365E;
+    --primary-dark: #10294E;
+    --primary-light: #19365F;
+    --primary-deep: #002157;
+    /* Magenta de marque (couleur d'accentuation du site) */
+    --secondary-color: #D30B64;
+    --secondary-dark: #A80850;
+    --secondary-light: #EB5D98;
+    --accent-color: #EB5D98;
     --white: #ffffff;
-    --light-gray: #f8f9fa;
-    --medium-gray: #e9ecef;
-    --dark-gray: #6c757d;
-    --text-primary: #2c3e50;
-    --text-secondary: #6c757d;
-    --gradient-primary: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
-    --gradient-secondary: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    --light-gray: #F3F6FA;
+    --medium-gray: #D9E7F8;
+    --pale-blue: #E8F1FF;
+    --dark-gray: #7A7A7A;
+    --text-primary: #1B1B1B;
+    --text-secondary: #7A7A7A;
+    --gradient-primary: linear-gradient(135deg, #1C365E 0%, #002157 100%);
+    --gradient-secondary: linear-gradient(135deg, #D30B64 0%, #EB5D98 100%);
+    /* Hauteur réelle de l'en-tête fixe : 0,75rem + 41,6px (liens du menu) + 0,75rem */
+    --header-height: 66px;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
 }
@@ -44,17 +50,18 @@ a { text-decoration: none; color: inherit; }
     width: 100%;
     top: 0;
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
 }
 .header .container { display: flex; justify-content: space-between; align-items: center; }
-.logo h1 { font-size: 2rem; color: var(--primary-color); font-weight: 700; }
-.logo h1 span { color: var(--secondary-color); }
+.logo img { display: block; height: 40px; width: auto; }
+/* Les ancres ne doivent pas amener leur titre sous l'en-tête fixe */
+section[id] { scroll-margin-top: calc(var(--header-height) + 1rem); }
 
-.main-nav ul { display: flex; list-style: none; gap: 2rem; }
-.main-nav ul li a { font-weight: 500; padding: 0.5rem 1rem; border-radius: 4px; }
+.main-nav ul { display: flex; list-style: none; gap: 1.25rem; }
+.main-nav ul li a { font-weight: 500; padding: 0.5rem 0.85rem; border-radius: 4px; }
 .main-nav ul li a:hover, .main-nav ul li a.active {
     color: var(--secondary-color);
-    background: rgba(52, 152, 219, 0.1);
+    background: rgba(211, 11, 100, 0.08);
 }
 .main-nav ul li a.btn-contact {
     background: var(--secondary-color);
@@ -65,14 +72,15 @@ a { text-decoration: none; color: inherit; }
 
 /* Hero */
 .hero {
-    padding: 120px 0 4rem;
+    padding: calc(var(--header-height) + 4rem) 0 5rem;
     background: var(--gradient-primary);
     color: var(--white);
 }
-.hero .container { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
-.hero-content h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+.hero .container { display: flex; justify-content: center; }
+.hero-content { max-width: 760px; text-align: center; }
+.hero-content h1 { font-size: 2.5rem; margin-bottom: 1.5rem; }
 .hero-subtitle { font-size: 1.5rem; margin-bottom: 2rem; opacity: 0.9; }
-.hero-buttons { display: flex; gap: 1.5rem; }
+.hero-buttons { display: flex; gap: 1.5rem; justify-content: center; }
 
 /* Buttons */
 .btn {
@@ -223,7 +231,7 @@ a { text-decoration: none; color: inherit; }
 .footer-section ul { list-style: none; }
 .footer-section ul li { margin-bottom: 0.5rem; }
 .footer-section ul li a { color: rgba(255,255,255,0.8); }
-.footer-section ul li a:hover { color: var(--secondary-color); }
+.footer-section ul li a:hover { color: var(--secondary-light); }
 .social-links { display: flex; gap: 0.5rem; }
 .social-links a {
     width: 40px;
@@ -286,7 +294,7 @@ a { text-decoration: none; color: inherit; }
 .product-header {
     background: var(--gradient-primary);
     color: var(--white);
-    padding: 4rem 0 3rem;
+    padding: calc(var(--header-height) + 3rem) 0 3rem;
     text-align: center;
 }
 .product-header h1 { color: var(--white); }
@@ -408,7 +416,7 @@ a { text-decoration: none; color: inherit; }
 .why-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    background: var(--gradient-secondary);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -455,7 +463,7 @@ a { text-decoration: none; color: inherit; }
 .use-case-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    background: var(--gradient-primary);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -477,7 +485,7 @@ a { text-decoration: none; color: inherit; }
 .tax-benefit-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    background: var(--gradient-primary);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -523,7 +531,7 @@ a { text-decoration: none; color: inherit; }
 .withdrawal-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    background: var(--gradient-secondary);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -555,7 +563,7 @@ a { text-decoration: none; color: inherit; }
 .early-withdrawal-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #f39c12 0%, #d68910 100%);
+    background: var(--gradient-primary);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -618,7 +626,7 @@ a { text-decoration: none; color: inherit; }
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
     padding: 0 1.5rem;
-    background: rgba(52, 152, 219, 0.05);
+    background: rgba(28, 54, 94, 0.04);
 }
 .faq-answer.active {
     max-height: 500px;
@@ -651,7 +659,7 @@ a { text-decoration: none; color: inherit; }
 .why-scpi-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #f39c12 0%, #d68910 100%);
+    background: var(--gradient-primary);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -706,7 +714,7 @@ a { text-decoration: none; color: inherit; }
 .investment-mode-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    background: var(--gradient-secondary);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -796,9 +804,6 @@ a { text-decoration: none; color: inherit; }
 
 /* Responsive */
 @media (max-width: 1024px) {
-    .hero .container { grid-template-columns: 1fr; text-align: center; }
-    .hero-content { order: 2; }
-    .hero-image { order: 1; margin-bottom: 2rem; }
     .contact-content { grid-template-columns: 1fr; }
     .solutions-grid, .features-grid { grid-template-columns: repeat(2, 1fr); }
     .testimonials-grid { grid-template-columns: 1fr; }
@@ -820,4 +825,166 @@ a { text-decoration: none; color: inherit; }
     .footer-content { grid-template-columns: 1fr; text-align: center; }
     .social-links { justify-content: center; }
     .newsletter-form { flex-direction: column; }
+}
+
+/* ==========================================================================
+   Tableau des produits distribués (partenaires)
+   ========================================================================== */
+.partners-section { margin-bottom: 4rem; }
+.partners-intro {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+.partners-table {
+    overflow-x: auto;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(28, 54, 94, 0.12);
+    border: 1px solid var(--medium-gray);
+    -webkit-overflow-scrolling: touch;
+}
+.partners-table table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+.partners-table thead th {
+    background: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 1rem 0.85rem;
+    text-align: left;
+    vertical-align: middle;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    white-space: pre-line;
+}
+.partners-table thead th:last-child { border-right: none; }
+.partners-table tbody td {
+    padding: 1rem 0.85rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--medium-gray);
+    color: var(--text-primary);
+}
+.partners-table tbody tr:last-child td { border-bottom: none; }
+.partners-table tbody tr:nth-child(even) { background: var(--light-gray); }
+.partners-table tbody tr:hover { background: var(--pale-blue); }
+/* Groupes de partenaires (pour les tableaux multi-lignes en Capitalisation) */
+.partners-table .partner-generali, .partners-table .partner-axa { background: var(--white); }
+.partners-table .partner-generali td, .partners-table .partner-axa td { background: var(--white); }
+.partners-table .partner-swisslife, .partners-table .partner-abeille { background: var(--light-gray); }
+.partners-table .partner-swisslife td, .partners-table .partner-abeille td { background: var(--light-gray); }
+
+/* Colonne compagnie : logo officiel + raison sociale */
+.partners-table .col-partner { min-width: 150px; }
+.partner-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+}
+.partner-brand img {
+    width: 120px;
+    height: 44px;
+    object-fit: contain;
+    object-position: center;
+}
+.partner-brand .partner-name {
+    font-weight: 600;
+    font-size: 0.78rem;
+    color: var(--primary-color);
+    line-height: 1.25;
+}
+.partners-table .contract-name {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.partners-table .fee-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.partners-table .fee-list li {
+    margin: 0;
+    padding: 0.1rem 0;
+    white-space: nowrap;
+}
+.partners-table .perf {
+    font-weight: 600;
+    color: var(--secondary-color);
+    white-space: nowrap;
+}
+.partners-table .muted { color: var(--text-secondary); }
+.partners-table .nowrap { white-space: nowrap; }
+.partners-note {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    text-align: center;
+}
+.table-hint {
+    display: none;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .table-hint { display: block; }
+    .partners-table table { font-size: 0.8rem; }
+    .partner-brand img { width: 96px; height: 38px; }
+}
+
+/* Page d'accueil réduite aux 4 onglets */
+.tabs-home { padding: 5rem 0; background: var(--light-gray); }
+
+/* Navigation mobile */
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+}
+.logo a { display: inline-block; line-height: 0; }
+
+@media (max-width: 768px) {
+    :root { --header-height: 60px; }
+    .mobile-menu-btn { display: block; }
+    .logo img { height: 36px; }
+    .main-nav { display: flex; align-items: center; }
+    .main-nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--white);
+        padding: 0.5rem 0;
+        box-shadow: 0 8px 16px rgba(28, 54, 94, 0.15);
+    }
+    .main-nav ul.active { display: flex; }
+    .main-nav ul li { width: 100%; }
+    .main-nav ul li a {
+        display: block;
+        padding: 0.85rem 2rem;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    /* Sous ce palier, c'est le bouton du menu (32px) qui fixe la hauteur, pas le logo */
+    :root { --header-height: 56px; }
+    .logo img { height: 32px; }
 }

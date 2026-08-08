@@ -6,27 +6,35 @@ Site web professionnel pour TH2 Patrimoine, cabinet de conseil et de stratégie 
 
 ```
 TH2-Patrimoine/
-├── index.html                 # Page d'accueil
+├── index.html                 # Page d'accueil (les 4 onglets)
 ├── css/
 │   └── styles.css            # Styles CSS principaux
 ├── js/
 │   └── main.js               # JavaScript principal
+├── assets/
+│   ├── logo-th2-patrimoine.png   # Logo officiel affiché dans l'en-tête
+│   ├── logos/                # Logos officiels des partenaires
+│   └── data/
+│       └── produits-distribues.xlsx  # Source des tableaux produits
 ├── pages/
-│   ├── assurance-vie.html    # Page Assurance-vie
-│   ├── capitalisation.html   # Page Capitalisation
-│   ├── per.html              # Page PER (Plan d'Épargne Retraite)
-│   └── prevoyance.html       # Page Prévoyance
+│   ├── assurance-vie.html    # Onglet Assurance-vie
+│   ├── capitalisation.html   # Onglet Capitalisation
+│   ├── per.html              # Onglet PER (Plan d'Épargne Retraite)
+│   └── scpi.html             # Onglet SCPI
 └── README.md                 # Documentation
 ```
 
 ## Fonctionnalités
 
 ### Pages principales
-- **Accueil** : Présentation des solutions, témoignages, formulaire de contact
-- **Assurance-vie** : Solutions d'épargne et de transmission
-- **Capitalisation** : Investissement et croissance du capital
-- **PER** : Préparation de la retraite avec avantages fiscaux
-- **Prévoyance** : Protection des proches et couverture des aléas
+- **Accueil** : accès aux 4 onglets Assurance-vie, Capitalisation, PER et SCPI
+- **Assurance-vie** : solutions d'épargne et de transmission
+- **Capitalisation** : investissement et croissance du capital
+- **PER** : préparation de la retraite avec avantages fiscaux
+- **SCPI** : investissement immobilier sans contrainte de gestion
+
+Chaque onglet se termine par le tableau comparatif des produits distribués, avec le logo
+officiel de chaque partenaire. Les données proviennent de `assets/data/produits-distribues.xlsx`.
 
 ### Caractéristiques techniques
 - Design responsive (mobile, tablette, desktop)
@@ -38,12 +46,15 @@ TH2-Patrimoine/
 
 ## Palette de couleurs
 
-D'après l'analyse du site th2patrimoine.com, la palette utilisée est :
-- **Bleu foncé** : #2c3e50 (couleur principale)
-- **Bleu clair** : #3498db (couleur secondaire)
-- **Rouge** : #e74c3c (couleur d'accent)
-- **Gris clair** : #f8f9fa (arrière-plan)
+Palette reprise du site th2patrimoine.com :
+- **Bleu nuit** : #1C365E (couleur principale) — variantes #002157 et #10294E
+- **Magenta** : #D30B64 (couleur d'accentuation : boutons, liens actifs, chiffres clés)
+- **Rose** : #EB5D98 (accent secondaire, dégradés)
+- **Bleus clairs** : #D9E7F8 et #F3F6FA (arrière-plans et bordures)
 - **Blanc** : #ffffff
+- **Typographie** : Montserrat
+- **Logo** : `assets/logo-th2-patrimoine.png`, affiché en haut à gauche sur toutes les pages
+  (hauteur 48 px en desktop, 38 px sous 768 px, 32 px sous 420 px)
 
 ## Utilisation
 
@@ -63,8 +74,8 @@ D'après l'analyse du site th2patrimoine.com, la palette utilisée est :
 Éditez les variables CSS dans `css/styles.css` :
 ```css
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
+    --primary-color: #1C365E;
+    --secondary-color: #D30B64;
     /* ... */
 }
 ```
