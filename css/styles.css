@@ -922,6 +922,8 @@ section[id] { scroll-margin-top: calc(var(--header-height) + 1rem); }
 }
 .partners-table .muted { color: var(--text-secondary); }
 .partners-table .nowrap { white-space: nowrap; }
+.partners-table .narrow-header { min-width: 180px; white-space: pre-line; }
+.partners-table .compact-header { min-width: 90px; white-space: pre-line; }
 .partners-note {
     margin-top: 1rem;
     font-size: 0.8rem;
